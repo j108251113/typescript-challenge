@@ -5,6 +5,7 @@
  */
 export function add(a: number, b: number): number {
     // 在此實現函式
+    return a + b
 }
 
 /**
@@ -44,4 +45,4 @@ export function divide(a: number, b: number): number {
 export function add100(a: number, b: number): number {
     const sum = a + b;
     return sum > 100 ? 100 : sum;
-  }
+}
