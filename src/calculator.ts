@@ -25,6 +25,7 @@ export function subtract(a: number, b: number): number {
  */
 export function multiply(a: number, b: number): number {
     // 在此實現函式
+    return a * b
 }
 
 /**
