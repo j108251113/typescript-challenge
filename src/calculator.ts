@@ -35,6 +35,10 @@ export function multiply(a: number, b: number): number {
  */
 export function divide(a: number, b: number): number {
     // 在此實現函式
+    if (b == 0) {
+        throw new Error("Cannot divide by zero")
+    }
+    return a / b
 }
 
 /**
