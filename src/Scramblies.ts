@@ -14,5 +14,5 @@
 // scramble('katas', 'steak') ==> False
 
 export function scramble(str1: string, str2: string): boolean {
-    return str1.includes(str2) || str1.includes(str2.split('').reverse().join(''));
+    return str1.includes(str2) || str1.split('').sort().join('') === str2.split('').sort().join('');
 }

@@ -41,5 +41,13 @@ describe('兩個字元', () => {
 describe('三個字元', () => {
     it('兩個字串完全相等時回傳的布林值應為真', () => {
         expect(scramble('abc', 'abc')).toBeTruthy();
-    })
+    });
+
+    it('兩個字串長度相等，字元相同，但順序不同時，回傳的布林值應為真', () => {
+        expect(scramble('cab', 'abc')).toBeTruthy();
+        expect(scramble('cba', 'abc')).toBeTruthy();
+        expect(scramble('bac', 'abc')).toBeTruthy();
+        expect(scramble('bca', 'abc')).toBeTruthy();
+        expect(scramble('acb', 'abc')).toBeTruthy();
+    });
 });
