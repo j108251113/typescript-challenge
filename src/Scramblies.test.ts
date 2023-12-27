@@ -23,4 +23,8 @@ describe('兩個字元', () => {
         expect(scramble('ab', 'ac')).toBeFalsy();
         expect(scramble('cb', 'ab')).toBeFalsy();
     });
+
+    it('兩個字元都不相同時，回傳的布林值為假', () => {
+        expect(scramble('ab', 'cd')).toBeFalsy();
+    });
 });
