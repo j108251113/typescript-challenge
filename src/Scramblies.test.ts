@@ -28,3 +28,9 @@ describe('兩個字元', () => {
         expect(scramble('ab', 'cd')).toBeFalsy();
     });
 });
+
+describe('三個字元', () => {
+    it('三個字元完全相同時且順序相同時，回傳的布林值為真', () => {
+        expect(scramble('abc', 'abc')).toBeTruthy();
+    });
+});
