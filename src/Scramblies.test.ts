@@ -14,4 +14,8 @@ describe('兩個字元', () => {
     it('兩個字元若完全相等時回傳的布林值為真', () => {
         expect(scramble('ab', 'ab')).toBeTruthy();
     });
+
+    it('兩個字元若字元相同，順序不同時，回傳的布林值為真', () => {
+        expect(scramble('ab', 'ba')).toBeTruthy();
+    });
 });
