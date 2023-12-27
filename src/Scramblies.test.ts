@@ -18,4 +18,9 @@ describe('兩個字元', () => {
     it('兩個字元若字元相同，順序不同時，回傳的布林值為真', () => {
         expect(scramble('ab', 'ba')).toBeTruthy();
     });
+
+    it('只有一個字元相同且位置相同，另一個字元不相同但位置相同，回傳的布林值為假', () => {
+        expect(scramble('ab', 'ac')).toBeFalsy();
+        expect(scramble('cb', 'ab')).toBeFalsy();
+    });
 });
