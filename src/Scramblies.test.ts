@@ -27,10 +27,13 @@ describe('兩個字元', () => {
     it('兩個字元都不相同時，回傳的布林值為假', () => {
         expect(scramble('ab', 'cd')).toBeFalsy();
     });
-});
 
-describe('三個字元', () => {
-    it('三個字元完全相同時且順序相同時，回傳的布林值為真', () => {
-        expect(scramble('abc', 'abc')).toBeTruthy();
+    it('兩個字串的長度不相等，但字串1包含字串2的字元時，回傳的布林值為真', () => {
+        expect(scramble('ab', 'a')).toBeTruthy();
+        expect(scramble('ab', 'b')).toBeTruthy();
+    });
+
+    it('兩個字串的長度不相等，且字串1不包含字串2的字元時，回傳的布林值為假', () => {
+        expect(scramble('ab', 'c')).toBeFalsy();
     });
 });
