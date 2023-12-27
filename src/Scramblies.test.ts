@@ -37,3 +37,9 @@ describe('兩個字元', () => {
         expect(scramble('ab', 'c')).toBeFalsy();
     });
 });
+
+describe('三個字元', () => {
+    it('兩個字串完全相等時回傳的布林值應為真', () => {
+        expect(scramble('abc', 'abc')).toBeTruthy();
+    })
+});
