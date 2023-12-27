@@ -50,4 +50,11 @@ describe('三個字元', () => {
         expect(scramble('bca', 'abc')).toBeTruthy();
         expect(scramble('acb', 'abc')).toBeTruthy();
     });
+    it('兩個字串長度不相等，字串1包含字串2的所有字元，但順序不同時，回傳的布林值應為真', () => {
+        expect(scramble('cab', 'bc')).toBeTruthy();
+        expect(scramble('cba', 'bc')).toBeTruthy();
+        expect(scramble('bac', 'bc')).toBeTruthy();
+        expect(scramble('bca', 'bc')).toBeTruthy();
+        expect(scramble('acb', 'bc')).toBeTruthy();
+    })
 });

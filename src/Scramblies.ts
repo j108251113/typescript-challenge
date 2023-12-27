@@ -14,5 +14,19 @@
 // scramble('katas', 'steak') ==> False
 
 export function scramble(str1: string, str2: string): boolean {
-    return str1.includes(str2) || str1.split('').sort().join('') === str2.split('').sort().join('');
+    const charCountMap = new Map<string, number>();
+
+    for (const char of str1) {
+        charCountMap.set(char, (charCountMap.get(char) || 0) + 1);
+    }
+
+    for (const char of str2) {
+        if (!charCountMap.has(char) || charCountMap.get(char)! <= 0) {
+            return false;
+        }
+
+        charCountMap.set(char, charCountMap.get(char)! - 1);
+    }
+
+    return true;
 }
