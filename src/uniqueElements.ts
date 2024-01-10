@@ -6,4 +6,7 @@
  */
 export function uniqueElements(array: number[]): number[] {
     // 請在此處寫下你的程式碼
+    let set: Set<number> = new Set()
+    array.forEach(n => set.add(n))
+    return [...set]
 }
