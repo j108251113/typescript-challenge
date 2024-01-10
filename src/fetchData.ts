@@ -6,4 +6,25 @@
  */
 
 // 請在下方寫下你的程式碼
+export function fetchData(url: string) {
+    return new Promise((resolve, reject) => {
+        try {
+            let xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        resolve(JSON.parse(xhr.responseText))
+                    } else {
+                        reject("Error fetching data from the server")
+                    }
+                }
+            }
+
+            xhr.open("GET", url, true)
+            xhr.send()
+        } catch (error) {
+            reject(error)
+        }
+    })
+}
 
