@@ -12,4 +12,22 @@
  */
 export function classifyAge(age: number): string {
     // 請在此處寫下你的程式碼
+    switch (true) {
+        case age <= 12:
+            return Agegroup.Child
+
+        case age > 12 && age <= 17:
+            return Agegroup.Teenager
+
+        case age > 17 && age <= 64:
+            return Agegroup.Adult
+        default:
+            return Agegroup.Senior
+    }
+}
+enum Agegroup {
+    Child = "Child",
+    Teenager = "Teenager",
+    Adult = "Adult",
+    Senior = "Senior"
 }
